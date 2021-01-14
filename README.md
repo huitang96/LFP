@@ -28,5 +28,3 @@ Please use the following commands for training and testing by single GPU or mult
 ## Test with multiple GPUs
     ./tools/dist_test.sh ${CONFIG_FILE} ${CHECKPOINT_FILE} ${GPU_NUM} [--out ${RESULT_FILE}] [--eval ${EVAL_METRICS}] 
    
-## Demo
-With our trained model, detection results of an image can be visualized using the following command.  
