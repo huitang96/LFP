@@ -1,5 +1,5 @@
 # LFP
-This code is an official implementation of "LFP: LOOP FEATURE PYRAMID FOR OBJECT DETECTION(Submission under review![ICIP2021](https://2021.ieeeicip.org/))" based on the open source object detection toolbox mmdetection.
+This code is an official implementation of "LFP: LOOP FEATURE PYRAMID FOR OBJECT DETECTION(Submission under review![ICIP2021](https://2021.ieeeicip))" based on the open source object detection toolbox mmdetection.
 
 ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/3_3.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/3.bmp)
 ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/4_4.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/4.bmp)
