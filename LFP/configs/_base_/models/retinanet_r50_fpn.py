@@ -1,0 +1,60 @@
+# model settings
+model = dict(
+    type='RetinaNet',#model
+    pretrained='torchvision://resnet50',#load the pre-trained model 
+    backbone=dict(
+        type='ResNet',#网络模型
+        depth=50,# 网络深度
+        num_stages=4,#resnet的stage数量
+        out_indices=(0, 1, 2, 3),#输出的stage序号
+        frozen_stages=1,#冻结的stage数量，即该stage不更新参数，-1表示所有的stage都更新参数
+        norm_cfg=dict(type='BN', requires_grad=True),#定义正则化 需要更新参数
+        norm_eval=True,
+        style='pytorch'),#网络风格：如果设置pytorch，则stride为2的层是conv3x3的卷积层；如果设置caffe，则stride为2的层是第一个conv1x1的卷积层
+    neck=dict(
+        type='FPN',# 定义FPN
+        in_channels=[256, 512, 1024, 2048],# C2：256, C3：512, C4:1024, C5:2048
+        out_channels=256,#定义输出的通道数
+        start_level=1,# 开始进行FPN的特征层  舍去C2，取C3到C5，构建P6，P7（5层）
+        add_extra_convs=True,# 是否需要额外的卷积
+        num_outs=5),#输出的特征数，C3-C4-C5-C6-C7
+    bbox_head=dict(
+        type='RetinaHead',# 定义RetinaNetHead 
+        num_classes=80, #类别数
+        in_channels=256,# 定义输入的通道数
+        stacked_convs=4,# 卷积层数
+        feat_channels=256,# 定义输出特征的通道数
+        anchor_generator=dict(
+            type='AnchorGenerator',
+            octave_base_scale=4,# 定义基础的anchor倍数
+            scales_per_octave=3,# 定义anchors_scales的个数
+            ratios=[0.5, 1.0, 2.0],# 定义长宽比
+            strides=[8, 16, 32, 64, 128]),# 定义anchor_strides
+        bbox_coder=dict(
+            type='DeltaXYWHBBoxCoder',
+            target_means=[.0, .0, .0, .0],
+            target_stds=[1.0, 1.0, 1.0, 1.0]),
+        loss_cls=dict(
+            type='FocalLoss',
+            use_sigmoid=True,
+            gamma=2.0,
+            alpha=0.25,
+            loss_weight=1.0),# 定义分类误差
+        loss_bbox=dict(type='L1Loss', loss_weight=1.0))) #定义回归误差
+# training and testing settings
+train_cfg = dict(
+    assigner=dict(
+        type='MaxIoUAssigner',
+        pos_iou_thr=0.5,
+        neg_iou_thr=0.4,
+        min_pos_iou=0,
+        ignore_iof_thr=-1),
+    allowed_border=-1,
+    pos_weight=-1,
+    debug=False)
+test_cfg = dict(
+    nms_pre=1000,
+    min_bbox_size=0,
+    score_thr=0.05,
+    nms=dict(type='nms', iou_threshold=0.5),
+    max_per_img=100)
