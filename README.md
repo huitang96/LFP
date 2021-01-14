@@ -4,4 +4,5 @@ This code is an official implementation of "LFP: LOOP FEATURE PYRAMID FOR OBJECT
 ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/3_3.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/3.bmp)
 ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/4_4.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/4.bmp)
 ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/8_8.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/8.bmp)
+![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/5_5.bmp)       ![image](https://github.com/huitang96/LFP/blob/master/LFP/MY_PICTURES/images/5.bmp)
 
