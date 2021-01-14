@@ -8,3 +8,5 @@ This code is an official implementation of "LFP: LOOP FEATURE PYRAMID FOR OBJECT
 #### Notes:  PAFPN(left), LFP(right)
 
 
+# Installation
+Please refer to![INSTALL.md ](https://github.com/JialeCao001/D2Det/blob/master/docs/INSTALL.md)of mmdetection.
