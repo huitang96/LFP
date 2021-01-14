@@ -9,4 +9,4 @@ This code is an official implementation of "LFP: LOOP FEATURE PYRAMID FOR OBJECT
 
 
 # Installation
-Please refer to ![INSTALL.md ](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md)of mmdetection.
+Please refer to![INSTALL.md ](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md)of mmdetection.
