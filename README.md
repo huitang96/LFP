@@ -5,6 +5,8 @@ This code is an official implementation of  "**LFP: LOOP FEATURE PYRAMID FOR OBJ
 
 **Notes:  PAFPN(top), LFP(bottom)**
 
+Keep other components unchanged, improve the neck part of object detection. Based on FPN, PAFPN proposes LFP, which maintains the characteristics of rapid convergence. The object detection effect at AP_small, AP_middle, AP_large are improved. The code is located under the path: mmdet/models/necks/lfp.py
+
 
 # Installation
 Please refer to[INSTALL.md ](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md)of mmdetection.
