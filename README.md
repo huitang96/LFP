@@ -8,6 +8,7 @@ This code is an official implementation of  "**LFP: LOOP FEATURE PYRAMID FOR OBJ
 
 # Installation
 Please refer to[INSTALL.md ](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md)of mmdetection.
+
 I use pytorch1.5.0, cuda10.2, and mmcv1.2.2.
 
 
